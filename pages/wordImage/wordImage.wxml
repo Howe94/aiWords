@@ -1,0 +1,32 @@
+<!--css3动画加载-->
+<view class='animation' wx:if='{{animation}}'>
+  <view class='animation-list'>
+  
+  </view>
+</view>
+
+<!--图片区域-->
+<view class='pages'>
+  <view class='face'>
+    <image src='{{images}}' mode='widthFix'></image>
+  </view>
+</view>
+<!--识别结果-->
+<view class='result'>
+  <text>识别结果</text>
+  <text id='result-text' bindtap='copy' hidden='{{faceend}}'>复制</text>
+</view>
+
+<!-- 识别的文字 -->
+<view class='words' hidden='{{faceend}}'>
+    <view wx:for="{{words}}" class='aitext'>{{item.words}}</view>
+</view>
+<!-- <view class='words' hidden='{{faceend}}'>
+    <view class='aitext'>{{words}}</view>
+</view> -->
+<!-- 没有识别到文字 -->
+<view class='notwords' hidden='{{wordmessage}}'>!!!没有识别到文字</view>
+<!-- 上传图片 -->
+<view class='btn'>
+  <button type='primary' bindtap='wordImage'>上传图片</button>
+</view>

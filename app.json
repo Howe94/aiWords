@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/homePage/homePage",
+    "pages/wordImage/wordImage",
+    "pages/aboutMe/aboutMe"
+
+  ],
+  "window":{
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#50a7e4",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#8c8c8c",
+    "selectedColor": "#50a7e4",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/homePageSelected.png",
+        "iconPath": "images/homePage.png",
+        "pagePath": "pages/homePage/homePage",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/aboutMeSelected.png",
+        "iconPath": "images/aboutMe.png",
+        "pagePath": "pages/aboutMe/aboutMe",
+        "text": "我"
+      }
+    ]
+  }
+}

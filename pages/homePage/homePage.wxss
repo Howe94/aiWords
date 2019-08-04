@@ -1,0 +1,36 @@
+/* pages/homePage/homePage.wxss */
+page{
+  background: rgba(226, 223, 223, 0.774);
+}
+form{
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*=================分类导航====================*/
+.navy {
+  background: rgba(255, 255, 255, 0.89);
+  display: flex; 
+  justify-content: left; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10rpx auto;
+  padding-bottom: 10rpx;
+}
+.nav-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  /* padding: 20rpx; */
+  padding-top: 20rpx;
+}
+.nav-item .nav-image {
+  width: 80rpx;
+  height: 80rpx;
+  /* border-radius: 50%;设置边界圆角 */
+}
+.nav-item text {
+  padding-top: 20rpx;
+  font-size: 25rpx;
+}

@@ -1,0 +1,95 @@
+/**index.wxss**/
+.pages{background: #c9d0d8}
+.face{
+  background: white;
+  height: 500rpx;
+  margin: 0 35rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.face image{
+  width: 500rpx;
+  height: 500rpx;
+}
+/* 识别结果 */
+
+.result{
+  display: flex;
+  justify-content: space-between;
+  padding: 35rpx;
+}
+.result text{font-size: 30rpx;color: #00aff4;}
+#result-text{
+  background: blueviolet;
+  padding: 0 20rpx;
+  border-radius: 50rpx;
+  color: white;
+}
+/* 识别到的文字 */
+
+.words{
+  height: 470rpx;
+  background: #c9d0d8;
+  margin: 0 35rpx;
+  overflow-y: auto;
+}
+.aitext{font-size: 55rpx;}
+/* 没有识别到文字 */
+.notwords{
+  text-align:center;
+  margin: 0 auto;
+  color:red;
+
+}
+/* 上传图片 */
+.btn{
+  position: fixed;
+  bottom: 50rpx;
+  width: 100%;
+}
+.btn button{
+  width: 350rpx;
+  border-radius: 50rpx;
+}
+
+
+/* 正在加载动画效果 */
+.animation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 500rpx;
+}
+.animation-list{
+  width: 100%;
+  height: 450rpx;
+  background: linear-gradient(to bottom,rgba(216, 179, 255, 0), rgb(217, 192, 243),1);
+  position: relative;
+  animation: myfirst 2s linear 1s infinite alternate;
+  top: -600rpx;
+}
+
+/* 动画效果 */
+@keyframes myfirst{
+  0%{background: linear-gradient(to bottom,rgba(216, 179, 255, 0), rgba(216, 179, 255, 1));
+  top:-600rpx;
+  left:0;
+  }
+  25%{
+    left:0;
+    top:50rpx;
+  }
+  50%{
+    left:0;
+    top:50rpx;
+  }
+  75%{
+    left:0;
+    top:50rpx;
+  }
+  75%{
+    left:0;
+    top:-600rpx;
+  }
+}

@@ -1,0 +1,32 @@
+<!--pages/homePage/homePage.wxml-->
+<page>
+<!-- 搜索框 -->
+<form>
+  <view>
+      <SearchBar id="SearchBar" bindinput:searchstr="{{searchstr}}" bind:searchList="searchList" bind:endsearchList="endsearchList" bind:cancelsearch="cancelsearch" bind:activity_clear="activity_clear">
+      </SearchBar>
+  </view>
+</form>
+<!-- 轮播图 -->
+<view class='swiperBox'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}" style='height:{{height}}rpx'>
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+      <image src="{{item}}" class="slide-image" mode="widthFix" bindload='setContainer' style='height:{{height}}rpx; width:{{imgWidth}}px'/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 分类导航 -->
+ <view>
+  <view class="navy">
+    <block wx:for-items="{{menus}}" wx:key="name">
+      <view class="nav-item"  data-type="{{item.menuName}}" data-typeid="{{item.id}}" bindtap='navigate'>
+        <image src="{{item.imgUrl}}" class="nav-image" />
+        <text>{{item.menuName}}</text>
+      </view>
+    </block>
+  </view>
+ </view> 
+</page>
